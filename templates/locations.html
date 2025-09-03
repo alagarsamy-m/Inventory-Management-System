@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Location List</title>
+    <link rel="stylesheet" href="static/location.css">
+</head>
+<body>
+    <h1>Locations</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Location ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for location in locations %}
+            <tr>
+                <td>{{ location[0] }}</td>
+                <td>{{ location[1] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <h1>Add Location</h1>
+    <form method="POST" action="{{ url_for('locations') }}">
+        <input type="text" name="name" placeholder="Location Name" required>
+        <input type="submit" name="add_location" value="Add" class="submit">
+        <input type="submit" name="delete_location" value="Remove" class="rsubmit">
+    </form>
+</body>
+</html>

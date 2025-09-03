@@ -1,0 +1,19 @@
+CREATE TABLE Product (
+    product_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    quantity INT
+);
+
+CREATE TABLE Location (
+    location_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100)
+);
+
+CREATE TABLE ProductMovement (
+    movement_id INT PRIMARY KEY AUTO_INCREMENT,
+    from_location VARCHAR(100),
+    to_location VARCHAR(100),
+    product VARCHAR(100),
+    qty INT,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

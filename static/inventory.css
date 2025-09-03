@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #333;
+}
+
+.submit {
+    background-color: rgb(9, 173, 9);
+    color: beige;
+    border-radius: 10px;
+    width: 100px;
+    cursor: pointer;
+}
+.rsubmit{
+    background-color: rgb(240, 58, 3);
+    color: beige;
+    border-radius: 10px;
+    width: 100px;
+    cursor: pointer;
+}
+
+form {
+    padding: 15px;
+    border-style: 1px solid;
+    width: fit-content;
+    text-align: center;
+    border-radius: 15px;
+    margin: auto;
+    box-shadow: rgba(253, 251, 251, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: aliceblue;
+    font-weight: bold;
+}
+
+
+h2{
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+table,td,th{
+    margin: auto;
+    border-radius: 12px;
+    border: 1px solid;
+    border-collapse : collapse;
+    text-align: center;
+    font-weight: bolder;
+    width: fit-content;
+    background-color: aliceblue;
+    padding: 7px;
+}
+th{
+    background-color: rgb(207, 207, 194);
+    border-radius: 0px;
+}

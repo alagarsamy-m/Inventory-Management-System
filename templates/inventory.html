@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="static/inventory.css">
+</head>
+<body>
+    <h2>Select City</h2>
+    <form method="POST" action="{{ url_for('inventory') }}">
+        <select name="city">
+            {% for location in locations %}
+            <option value="{{ location[1] }}">{{ location[1] }}</option>
+            {% endfor %}
+        </select>
+        
+        <input type="submit" value="Submit" class="submit">
+    </form>
+
+    {% if products %}
+    <h2>Product List for {{ city }}</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Edit Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product[0] }}</td>
+                <td>{{ product[1] }}</td>
+                <td>{{ product[2] }}</td>
+                <td>
+                    <form method="POST" action="{{ url_for('inventory') }}">
+                        <input type="hidden" name="city" value="{{ city }}">
+                        <input type="hidden" name="product_id" value="{{ product[0] }}">
+                        <input type="number" name="new_quantity" value="{{ product[2] }}" required>
+                        <input type="submit" name="edit_product" value="Update" class="submit">
+                        <input type="submit" name="delete_product" value="Delete" class="rsubmit">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    <h2>Add Product for {{ city }}</h2>
+    <form method="POST" action="{{ url_for('inventory') }}">
+        <input type="hidden" name="city" value="{{ city }}">
+        <input type="text" name="name" placeholder="Product Name" required>
+        <input type="number" name="quantity" placeholder="Quantity" required>
+        <input type="submit" name="add_product" value="Add Product" class="submit">
+    </form>
+</body>
+</html>

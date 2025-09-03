@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movements</title>
+    <link rel="stylesheet" href="static/movement.css">
+</head>
+<body>
+    <h1>Movements</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>From Location</th>
+                <th>To Location</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movement in movements %}
+            <tr>
+                <td>{{ movement[1] }}</td>
+                <td>{{ movement[2] }}</td>
+                <td>{{ movement[3] }}</td>
+                <td>{{ movement[4] }}</td>
+                <td>{{ movement[5] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/index.css">
+    <title>Home</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id='hideMe'>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <h3 style="color: rgb(250, 10, 10);"> {{ message }} </h3>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="logo">
+            <h>Inventory<span>Management</span>
+                <a href="{{url_for('locations')}}">Location</a>
+                <a href="{{url_for('inventory')}}">Warehouse Details</a>
+                <a href="{{(url_for('movements'))}}">ProductMovement</a>
+            </h>
+        </div>
+    </div>
+    <form action="{{url_for('result')}}" method="POST">
+        <h3>From Location</h3>
+        <input type="text" name="Start" required>
+
+        <h3>To Location</h3>
+        <input type="text" name="End" required>
+        <p>Select Item to be Transport</p>
+        <input type="text" name="item" required>
+        <p>Select Quantity in No's to Transport</p>
+        <input type="number" name="kg" required="">
+        <br><br><input type="submit" value="Submit" class="submit">
+        <p>(If you not sure how to fill this form visit WAREHOUSE)</p>
+    </form>
+    </div>
+</body>
+
+</html>

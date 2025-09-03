@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    margin-top: 12px;
+    background-color: black;
+    height: 75px;
+    width: 100%;
+    text-decoration: none;
+}
+
+h{
+    font-size: 32px;
+    font-family: italic;
+    color: white;
+    width: fit-content;
+}
+
+.nav span{
+    color: rgb(8, 131, 247);
+    font-size: 30px;
+    font-weight: bold;
+}
+a{
+    color: beige;
+    font-size: 20px;
+    text-decoration: none;
+    float: right;
+    padding: 20px;
+}
+a:hover{
+    color: rgb(8, 131, 247);
+}
+#container {
+    overflow:hidden;
+    position:relative;
+}
+#hideMe {
+    -webkit-animation: cssAnimation 5s forwards; 
+    animation: cssAnimation 5s forwards;
+}
+
+body{
+    background-color: #333;
+}
+
+h3{
+    padding: 10px; 
+}
+
+p{
+    padding: 10px; 
+    font-weight: bold;
+}
+
+form{
+    padding : 15px;
+    border-style :1px solid ;
+    width: fit-content;
+    text-align: center;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: rgba(253, 251, 251, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: aliceblue;
+    font-weight: bold;
+}
+
+form:hover{
+    background-color: rgb(240, 233, 169);
+    box-shadow: 0 0 5px rgb(229, 253, 9),
+    0 0 25px rgb(229, 253, 9),
+    0 0 50px rgb(229, 253, 9),
+    0 0 100px rgb(229, 253, 9);
+    }
+
+input,select{
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
+.submit{
+    background-color: rgb(9, 173, 9);
+    color: beige;
+    border-radius: 10px;
+    width: 100px;
+    cursor: pointer;
+    
+}
+
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}

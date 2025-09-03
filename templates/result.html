@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/result.css">
+    <title>Result</title>
+</head>
+
+<body>
+    <h1>Before Transporting Goods Availability</h1>
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>Location</th>
+            <th>Product</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>{{ starting_location }}</td>
+            <td>{{ item }}</td>
+            <td>{{ startloc_current[2] }}</td>
+        </tr>
+    </table>
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>Location</th>
+            <th>Product</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>{{ ending_location }}</td>
+            <td>{{ item }}</td>
+            <td>{{ endloc_current[2] }}</td>
+        </tr>
+    </table>
+    <h1>After Transporting Goods Availability</h1>
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>Location</th>
+            <th>Product</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>{{ starting_location }}</td>
+            <td>{{ item }}</td>
+            <td>{{ after_transport_startloc_item[2] }}</td>
+        </tr>
+    </table>
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>Location</th>
+            <th>Product</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>{{ ending_location }}</td>
+            <td>{{ item }}</td>
+            <td>{{ after_transport_endloc_item[2] }}</td>
+        </tr>
+    </table>
+</body>
+
+</html>
