@@ -1,3 +1,6 @@
+CREATE DATABASE inventory_management;
+USE inventory_management;
+
 CREATE TABLE Product (
     product_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100),
